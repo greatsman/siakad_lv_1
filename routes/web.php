@@ -11,16 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    // return view('home');
-    return redirect('/dashboard');
-});
+Route::get('/', 'SiteController@home')->name('home');
+Route::get('/register', 'SiteController@register')->name('register');
+Route::get('/about', 'SiteController@about')->name('about');
 // route untuk login
 Route::get('/login', 'AuthController@login')->name('login');
 // route untuk proses login
 Route::post('/postlogin', 'AuthController@postlogin');
 // route untuk logout
 Route::get('/logout', 'AuthController@logout');
+
 // route untuk group yang harus login
 Route::group(['middleware' => ['auth','checkRole:admin']], function () {
         // route untuk dashboard

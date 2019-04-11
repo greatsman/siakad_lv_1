@@ -25,10 +25,10 @@
 	<!-- WRAPPER -->
 	<div id="wrapper">
 		<!-- NAVBAR -->
-		@include('layout.include.navbar')
+		@include('layouts.include.navbar')
 		<!-- END NAVBAR -->
 		<!-- LEFT SIDEBAR -->
-		@include('layout.include.sidebar')
+		@include('layouts.include.sidebar')
 		<!-- END LEFT SIDEBAR -->
 		<!-- MAIN -->
 		@yield('content')
